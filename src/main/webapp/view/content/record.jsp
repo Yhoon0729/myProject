@@ -10,6 +10,50 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <title>상위 기록</title>
+<style>
+body {
+    background: no-repeat center center fixed; 
+    background-size: cover;
+    color: #fff;
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+h3 {
+    color: #ffc107;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000;
+}
+.table {
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+.thead-dark th {
+    background-color: #343a40;
+    color: #ffc107;
+    font-weight: bold;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #343a40;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+</style>
 </head>
 <body>
     <div class="container mt-5">
@@ -37,7 +81,7 @@
                     </tbody>
                 </table>
                 <div class="text-center mt-4">
-                    <a href="${pageContext.request.contextPath}/content/guessNumber" class="btn btn-primary">기록 부수기</a>
+                    <a href="${pageContext.request.contextPath}/content/guessNumber" class="btn btn-primary">기록 깨러 가기</a>
                 </div>
             </div>
         </div>

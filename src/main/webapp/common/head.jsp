@@ -16,33 +16,66 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <style>
-.nav {
-	color: #000;
+body {
 	background-color: #f8f9fa;
-	font-weight: 900;
 }
 
-/* 가운데 정렬을 위한 스타일 */
+.navbar {
+	background-color: #343a40;
+}
+
+.navbar-brand {
+	display: flex;
+	align-items: center;
+	padding: 0;
+}
+
+.navbar-brand img {
+	width: 100%;
+	height: auto;
+}
+
 .navbar-nav {
 	display: flex;
-	justify-content: center;
 	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
-/* 로고 이미지 크기 조절 */
-.navbar-brand img {
-	width: 50%;
+.nav-item {
+	display: inline-block;
 }
 
-/* 목록 스타일 */
-.nav-item a.nav-link {
-	color: #000;
-	background-color: #f8f9fa;
+.nav-link {
+	color: #ffc107;
+	font-weight: bold;
+	padding: 10px 20px;
 }
 
-.nav-item a.nav-link:hover {
-	color: #f8f9fa;
-	background-color: #000;
+.nav-link:hover {
+	color: #fff;
+	background-color: #ffc107;
+	border-radius: 5px;
+}
+
+.navbar .nav-item.active .nav-link {
+	color: #fff;
+	background-color: #ffc107;
+	border-radius: 5px;
+}
+
+.navbar-brand {
+	color: #ffc107;
+	font-weight: bold;
+}
+
+.navbar-brand:hover {
+	color: #ffc107;
+}
+
+.navbar-nav .nav-item:first-child {
+	margin-left: 0;
 }
 </style>
 </head>
@@ -85,9 +118,7 @@
 			<li class="nav-item"><a
 				class="nav-link "
 				href="${pageContext.request.contextPath}/member/contentList">컨텐츠</a></li>
-			<li class="nav-item"><a
-				class="nav-link ${boardid eq '2'?'nav': ' '}"
-				href="${pageContext.request.contextPath}/board/boardList?boardid=2">자유게시판</a></li>
+			
 			<li class="nav-item"><a
 				class="nav-link"
 				href="${pageContext.request.contextPath}/content/record">명예의 전당</a></li>

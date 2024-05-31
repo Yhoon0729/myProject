@@ -13,28 +13,62 @@
 	crossorigin="anonymous">
 <style>
 body {
+	background-color: #f0f0f0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	min-height: 100vh;
-	background: -webkit-gradient(linear, left bottom, right top, from(#92b5db),
-		to(#1d466c));
-	background: -webkit-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
-	background: -moz-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
-	background: -o-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
-	background: linear-gradient(to top right, #92b5db 0%, #1d466c 100%);
+	padding-top: 20px;
+    background: no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
 }
 
-.input-form {
-	max-width: 680px;
-	margin-top: 80px;
-	padding: 32px;
-	background: #fff;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
+header, footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffc107;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 30px;
 	border-radius: 10px;
-	-webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	width: 80%;
+	max-width: 800px;
+	margin: 20px auto;
+	color: #ffc107;
+}
+
+.form-control, .btn-primary {
+    background-color: #343a40;
+    border-color: #ffc107;
+    color: #ffc107;
+}
+
+.form-control::placeholder {
+    color: #ffc107;
+}
+
+.form-control:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.invalid-feedback {
+    color: #ffc107;
 }
 </style>
+
 </head>
 <body>
 	<div class="container">
@@ -64,7 +98,7 @@ body {
 			</div>
 		</div>
 		<footer class="my-3 text-center text-small">
-			<p class="mb-1">&copy; 2021 YD</p>
+			
 		</footer>
 	</div>
 	<script> window.addEventListener('load', () => { const forms = document.getElementsByClassName('validation-form'); Array.prototype.filter.call(forms, (form) => { form.addEventListener('submit', function (event) { if (form.checkValidity() === false) { event.preventDefault(); event.stopPropagation(); } form.classList.add('was-validated'); }, false); }); }, false); </script>

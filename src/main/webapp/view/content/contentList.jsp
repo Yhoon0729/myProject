@@ -10,6 +10,35 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <title>게임 목록</title>
+<style>
+body {
+    background: no-repeat center center fixed; 
+    background-size: cover;
+    color: #fff;
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+h1 {
+    color: #ffc107;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000;
+}
+.list-group-item {
+    font-size: 1.2em;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid #ffc107;
+    font-weight: bold;
+}
+.list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffc107;
+}
+</style>
 </head>
 <body>
 	<div class="container">
